@@ -6,7 +6,6 @@ const {
 
 const router = express.Router();
 
-let cart = [];
 // Ajouter un produit au panier
 router.post("/", (req, res) => {
   const { id, name, price, taxRate, quantity } = req.body;
@@ -28,12 +27,12 @@ router.post("/", (req, res) => {
 
 // Récupérer les détails du panier
 router.get("/", (req, res) => {
-  const totals = calculateCartTotal(cart);
+  const totals = ;
   res.json({ cart, ...totals });
 });
 
 // Supprimer un produit
-router.delete("/:id", (req, res) => {
+router.delete("/", (req, res) => {
   const { id } = req.params;
   const initialLength = cart.length;
 
