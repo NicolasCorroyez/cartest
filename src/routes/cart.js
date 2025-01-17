@@ -6,6 +6,7 @@ const {
 
 const router = express.Router();
 
+
 // Ajouter un produit au panier
 router.post("/", (req, res) => {
   const { id, name, price, taxRate, quantity } = req.body;

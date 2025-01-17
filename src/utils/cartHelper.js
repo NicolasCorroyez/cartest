@@ -18,6 +18,8 @@ function calculateCartTotal(cart) {
 }
 
 function calculateDiscount(cart, discountRate) {
+  const { totalTTC } = calculateCartTotal(cart);
+  const discount = ((parseFloat(totalTTC) * discountRate) / 100).toFixed(2);
   return discount;
 }
 
